@@ -2539,7 +2539,7 @@
 			var self = this;
 			var $item, i, idx;
 	
-			$item = (typeof value === 'object') ? value : self.getItem(value);
+			$item = (typeof value === 'object' && value !== null) ? value : self.getItem(value);
 			value = hash_key($item.attr('data-value'));
 			i = self.items.indexOf(value);
 	
